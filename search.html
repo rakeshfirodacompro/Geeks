@@ -1,0 +1,29 @@
+<div ng-controller="searchCtrl">
+    <div class="search-box">
+        <div class="search-header">
+            header
+        </div>
+        <div class="search-data">
+            <div class="search-sidebar">
+                sidebar
+            </div>
+            <div class="search-content">
+                <div class="search-grid">
+                    <div ng-repeat="course in courses | filter:search">
+                        <div class="search-grid-item">
+                            <a href="#!/{{course.id}}"><img ng-src="{{course['doc'].image}}" class="search-grid-img"
+                                    alt="{{course.id}}"></a>
+                            <div class="grid-content">
+                                <a href="#!/{{course.id}}">
+                                    <h3 class="course-name">{{course["doc"].name}}</h3>
+                                </a>
+                                <hr>
+                                <p class="author-name">{{course["doc"].author}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
